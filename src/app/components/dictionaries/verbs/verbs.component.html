@@ -1,0 +1,55 @@
+<mat-card>
+  <mat-grid-list cols="3">
+    <!--U VERBS-->
+    <mat-grid-tile class="contextCards">
+      <div class="container">
+        <section class="header">
+          <section class="header-start">
+            U Verbs
+          </section>
+        </section>
+
+        <section class="body">
+          <h1 class = "word" *ngFor="let verb of sortedVerbs['U']"  (click)="openDialog(verb.japanese, verb.english)">
+            {{verb.japanese}}
+          </h1>
+        </section>
+      </div>
+    </mat-grid-tile>
+
+    <!--RU VERBS-->
+    <mat-grid-tile class="contextCards">
+      <div class="container">
+        <section class="header">
+          <section class="header-start">
+            RU Verbs
+          </section>
+        </section>
+
+        <section class="body">
+          <h1 class = "word" *ngFor="let verb of sortedVerbs['RU']" (click)="openDialog(verb.japanese, verb.english)">
+            {{verb.japanese}}
+          </h1>
+        </section>
+      </div>
+    </mat-grid-tile>
+
+    <!--IRREGULAR VERBS-->
+    <mat-grid-tile class="contextCards">
+      <div class="container">
+        <section class="header">
+          <section class="header-start">
+            Irregular Verbs
+          </section>
+        </section>
+
+        <section class="body">
+          <h1 class = "word" *ngFor="let verb of sortedVerbs['Irr']" (click)="openDialog(verb.japanese, verb.english)">
+            {{verb.japanese}}
+          </h1>
+        </section>
+      </div>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+</mat-card>

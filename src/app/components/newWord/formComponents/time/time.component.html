@@ -1,0 +1,44 @@
+<mat-card>
+  <form [formGroup] = 'timeForm' (submit)='saveTime()'>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="japanese"
+        formControlName="japanese"
+        placeholder="japanese"
+      />
+      <mat-error *ngIf="timeForm.get('japanese').invalid"
+        >Cannot Leave Blank</mat-error
+      >
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="english"
+        formControlName="english"
+        placeholder="english"
+      />
+      <mat-error *ngIf="timeForm.get('english').invalid"
+        >Cannot Leave Blank</mat-error
+      >
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="context"
+        formControlName="context"
+        placeholder="context"
+      />
+      <mat-error *ngIf="timeForm.get('context').invalid"
+        >Cannot Leave Blank</mat-error
+      >
+    </mat-form-field>
+    <br/>
+    <button mat-raised-button type='submit' color='accent'>Save Time</button>
+  </form>
+</mat-card>

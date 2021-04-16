@@ -1,0 +1,44 @@
+<mat-card>
+  <form [formGroup] = "adverbForm" (submit)="saveAdverb()">
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="japanese"
+        formControlName="japanese"
+        placeholder="japanese"
+      />
+      <mat-error *ngIf="adverbForm.get('japanese').invalid"
+        >Cannot Leave Blank</mat-error
+      >
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="english"
+        formControlName="english"
+        placeholder="english"
+      />
+      <mat-error *ngIf="adverbForm.get('english').invalid"
+        >Cannot Leave Blank</mat-error
+      >
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="context"
+        formControlName="context"
+        placeholder="context"
+      />
+      <mat-error *ngIf="adverbForm.get('context').invalid"
+        >Cannot Leave Blank</mat-error
+      >
+    </mat-form-field>
+    <br />
+    <button mat-raised-button type="submit" color="accent">Save Adverb</button>
+  </form>
+</mat-card>

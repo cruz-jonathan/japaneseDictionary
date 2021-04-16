@@ -1,0 +1,50 @@
+<mat-card>
+  <mat-grid-list cols="2" rowHeight='220px'>
+    <mat-grid-tile>
+      <form [formGroup]="colourForm" (submit)= "saveColour()">
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            name="japanese"
+            formControlName="japanese"
+            placeholder="japanese"
+          />
+          <mat-error *ngIf="colourForm.get('japanese').invalid"
+            >Cannot Leave Blank</mat-error
+          >
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            name="english"
+            formControlName="english"
+            placeholder="english"
+          />
+          <mat-error *ngIf="colourForm.get('english').invalid"
+            >Cannot Leave Blank</mat-error
+          >
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            name="hex"
+            formControlName="hex"
+            placeholder="hex"
+          />
+          <mat-error *ngIf="colourForm.get('hex').invalid"
+            >Must be 6 Characters with #</mat-error
+          >
+        </mat-form-field>
+        <br/>
+        <button mat-raised-button type = 'submit' color='accent'>Save Colour</button>
+      </form>
+    </mat-grid-tile>
+    <mat-grid-tile *ngIf="!colourForm.get('hex').invalid" [ngStyle]="{'background-color': colourForm.get('hex').value}">
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-card>

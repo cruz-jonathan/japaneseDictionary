@@ -1,0 +1,116 @@
+<mat-card>
+  <h1>Numbers</h1>
+  <mat-grid-list cols="3">
+
+    <!-- Numbers 1 - 10 -->
+    <mat-grid-tile class = "contextCards">
+      <div class = "container">
+        <!--HEADER-->
+        <section class = "header">
+          <section class = "header-start">
+            0 - ぜろ
+          </section>
+        </section>
+        <!--BODY-->
+        <section class = "body">
+          <!--REPEAT STARTING HERE-->
+          <h2 class = "word" *ngFor = "let index of numbersIndex">
+            {{index}} - {{numbersJapanese[index]}}
+          </h2>
+        </section>
+      </div>
+    </mat-grid-tile>
+
+    <!--Numbers 11 - 20-->
+    <mat-grid-tile class = "contextCards">
+      <div class = "container">
+        <!--HEADER-->
+        <section class = "header">
+          <section class = "header-start">
+          </section>
+        </section>
+        <!--BODY-->
+        <section class = "body">
+          <!--REPEAT STARTING HERE-->
+          <h2 class = "word" *ngFor = "let index of numbersIndexTwo">
+            {{index}} - {{numbersJapanese[index]}}
+          </h2>
+        </section>
+      </div>
+    </mat-grid-tile>
+
+    <!-- Numbers 30 - 100-->
+    <mat-grid-tile class = "contextCards">
+      <div class = "container">
+        <!--HEADER-->
+        <section class = "header">
+          <section class = "header-start">
+          </section>
+        </section>
+        <!--BODY-->
+        <section class = "body">
+          <!--REPEAT STARTING HERE-->
+          <h2 class = "word" *ngFor = "let index of numbersIndexThree">
+            {{index}} - {{numbersJapanese[index]}}
+          </h2>
+        </section>
+      </div>
+    </mat-grid-tile>
+
+    <!-- Numbers 100 - 900 -->
+    <mat-grid-tile class = "contextCards">
+      <div class = "container">
+        <!--HEADER-->
+        <section class = "header">
+          <section class = "header-start">
+          </section>
+        </section>
+        <!--BODY-->
+        <section class = "body">
+          <!--REPEAT STARTING HERE-->
+          <h2 class = "word" *ngFor = "let index of numbersIndexFour">
+            {{index}} - {{numbersJapanese[index]}}
+          </h2>
+        </section>
+      </div>
+    </mat-grid-tile>
+
+    <!-- Numbers 1000 - 9000-->
+    <mat-grid-tile class = "contextCards">
+      <div class = "container">
+        <!--HEADER-->
+        <section class = "header">
+          <section class = "header-start">
+          </section>
+        </section>
+        <!--BODY-->
+        <section class = "body">
+          <!--REPEAT STARTING HERE-->
+          <h2 class = "word" *ngFor = "let index of numbersIndexFive">
+            {{index}} - {{numbersJapanese[index]}}
+          </h2>
+        </section>
+      </div>
+    </mat-grid-tile>
+
+    <!-- Numbers 10000 - 90000-->
+    <mat-grid-tile class = "contextCards">
+      <div class = "container">
+        <!--HEADER-->
+        <section class = "header">
+          <section class = "header-start">
+          </section>
+        </section>
+        <!--BODY-->
+        <section class = "body">
+          <!--REPEAT STARTING HERE-->
+          <h2 class = "word" *ngFor = "let index of numbersIndexSix">
+            {{index}} - {{numbersJapanese[index]}}
+          </h2>
+        </section>
+      </div>
+    </mat-grid-tile>
+
+
+  </mat-grid-list>
+</mat-card>

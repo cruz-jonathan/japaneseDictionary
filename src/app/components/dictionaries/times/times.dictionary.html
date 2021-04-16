@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-grid-list cols="3">
+    <mat-grid-tile class="contextCards" *ngFor="let context of contexts">
+      <div class = "container">
+        <!--HEADER-->
+        <section class = "header">
+          <section class = "header-start">
+            {{context}}
+          </section>
+        </section>
+        <!--BODY-->
+        <section class = "body">
+          <h1 class = "word" *ngFor="let time of sortedTimes[context]"(click)="openDialog(time.japanese, time.english)">
+            {{time.japanese}}
+          </h1>
+        </section>
+      </div>
+
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-card>

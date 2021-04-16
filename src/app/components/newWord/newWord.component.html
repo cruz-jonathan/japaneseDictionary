@@ -1,0 +1,24 @@
+<mat-card>
+  <form [formGroup] = 'form'>
+    <mat-form-field>
+      <mat-label>Context</mat-label>
+      <mat-select appearance="fill" formControlName="context">
+        <mat-option value="adjectives">Adjectives</mat-option>
+        <mat-option value="adverbs">Adverbs</mat-option>
+        <mat-option value="colours">Colours</mat-option>
+        <mat-option value="expressions">Expressions</mat-option>
+        <mat-option value="nouns">Nouns</mat-option>
+        <mat-option value="times">Times</mat-option>
+        <mat-option value="verbs">Verbs</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+  <adjective-form *ngIf="form.value.context == 'adjectives'"></adjective-form>
+  <adverb-form *ngIf="form.value.context == 'adverbs'"></adverb-form>
+  <newColourComponent *ngIf= "form.value.context == 'colours'"></newColourComponent>
+  <newExpressionsComponent *ngIf = "form.value.context == 'expressions'"></newExpressionsComponent>
+  <newNounsComponent *ngIf = "form.value.context == 'nouns'"></newNounsComponent>
+  <newTimeComponent *ngIf = "form.value.context =='times'"></newTimeComponent>
+  <newVerbsComponent *ngIf = "form.value.context == 'verbs'"></newVerbsComponent>
+
+</mat-card>

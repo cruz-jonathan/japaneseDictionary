@@ -1,0 +1,104 @@
+<mat-card>
+  <form [formGroup]="verbForm" (submit)="saveVerb()">
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="japanese"
+        formControlName="japanese"
+        placeholder="japanese"
+      />
+      <mat-error *ngIf="verbForm.get('japanese').invalid"
+        >Cannot Leave Blank</mat-error
+      >
+    </mat-form-field>
+    <br/>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="english"
+        formControlName="english"
+        placeholder="english"
+      />
+      <mat-error *ngIf="verbForm.get('english').invalid"
+        >Cannot Leave Blank</mat-error
+      >
+    </mat-form-field>
+    <br/>
+
+    <mat-form-field>
+      <mat-label>Verb Type</mat-label>
+      <mat-select appearance="fill" formControlName="type">
+        <mat-option value="U">U - Verb</mat-option>
+        <mat-option value="RU">RU - Verb</mat-option>
+        <mat-option value="Irr">Irregular Verb</mat-option>
+      </mat-select>
+      <mat-error *ngIf="verbForm.get('type').invalid"
+        >Cannot Leave Blank</mat-error
+      >
+    </mat-form-field>
+    <br/>
+    <h3>Conjugations</h3>
+    <mat-grid-list cols="2" rowHeight="75px">
+      <mat-grid-tile>
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            name="presentPositive"
+            formControlName="presentPositive"
+            placeholder="Present Positive"
+          />
+          <mat-error *ngIf="verbForm.get('presentPositive').invalid"
+            >Cannot Leave Blank</mat-error
+          >
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            name="presentNegative"
+            formControlName="presentNegative"
+            placeholder="Present Negative"
+          />
+          <mat-error *ngIf="verbForm.get('presentNegative').invalid"
+            >Cannot Leave Blank</mat-error
+          >
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            name="pastPositive"
+            formControlName="pastPositive"
+            placeholder="past Positive"
+          />
+          <mat-error *ngIf="verbForm.get('pastPositive').invalid"
+            >Cannot Leave Blank</mat-error
+          >
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            name="pastNegative"
+            formControlName="pastNegative"
+            placeholder="Past Negative"
+          />
+          <mat-error *ngIf="verbForm.get('pastNegative').invalid"
+            >Cannot Leave Blank</mat-error
+          >
+        </mat-form-field>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <button mat-raised-button type = 'submit' color='accent'>Save Verb</button>
+  </form>
+</mat-card>
